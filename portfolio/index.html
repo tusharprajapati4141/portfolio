@@ -1,0 +1,1084 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    background-color: black;
+    color: white;
+}
+.nav ul{
+    margin-left: 735px;
+   
+}
+.nav li {
+    padding-left: 33px;
+    display: inline-block;
+    list-style: none;
+    align-items: center;
+    justify-content: space-between;
+    position: relative; 
+}
+.nav a {
+    text-decoration: none; 
+    font-size: 27px;
+    color: white;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    position: relative; 
+}
+.nav a::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background: rgb(97,252,255);
+    background: linear-gradient(61deg, rgba(97,252,255,1) 0%, rgba(2,215,255,1) 53%, rgb(50, 72, 235) 100%);
+    bottom: -5px;
+    left: 0;
+    transform: scaleX(0);
+    transform-origin: center;
+    transition: transform 0.3s ease-in-out;
+    border-radius: 5px;
+    
+}
+.nav a:hover::before {
+    transform: scaleX(1);
+   
+}
+.nav a:active{
+    color: aqua;
+}
+.proimg img{
+ margin-bottom: 80px;
+ height: 500px;
+ width: 480px;
+ margin-left: 90px;
+}
+.about{
+    margin-top: 100px;
+}
+.about{
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     gap: 8rem;
+    
+}
+.about .detail h1{
+    font-size: 50px;
+    font-weight: 2px;
+    line-height: 1.5;
+}
+span{
+    background: rgb(97,252,255);
+    background: linear-gradient(61deg, rgba(97,252,255,1) 0%, rgba(2,215,255,1) 53%, rgb(130, 201, 255) 100%);
+    background-clip: text;
+    color: transparent;
+}
+#detail{
+    width: 700px;
+    text-align: justify;
+    margin-top: 40px;
+    font-size: 18px;
+    line-height: 1.5;
+}
+.about img{
+    position: relative;
+    border-radius: 50%;
+    box-shadow: 0 0 20px rgb(82, 82, 240);
+    cursor: pointer;
+    transition: transform 0.9s ease;
+}
+.about img:hover{
+    transition: transform 0.9s ease;
+    filter: drop-shadow(0 0 10px rgb(6, 255, 238));
+    transform: scale(0.95);
+}
+#detail{
+    font-size: 1.1rem;
+    font-weight: 500;
+}
+.change{
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    font-weight: 600;
+}
+.btn {
+    display: inline-block;
+    padding: 1rem 2.8rem;
+    background: rgb(1, 136, 255);
+    border-radius: 40px;
+    font-size: 15px;
+    color: white;
+    transition: transform 0.9s ease;
+    letter-spacing: 0.1rem;
+    transition: 0.9s ease;
+    cursor: pointer;
+    font-weight: bold;
+}
+.btn:hover{
+    transition: scake(1.0);
+    background-color:  white;
+    color: rgb(1, 136, 255);
+    box-shadow: 0 0 25px aqua;
+    transition: transform 0.9s ease;
+    transform: scale(0.95);
+}
+
+.change{
+    font-size: 25px;
+    font-weight: 600;
+    min-width: 280px;
+}
+.change span{
+    position: relative;
+}
+.change span::before{
+    content: 'Java Full Stack Developer';
+    color: rgb(0, 208, 255);
+    animation: words 10s infinite;
+}
+.change span::after{
+    content: '';
+    color: rgb(74, 44, 245);
+    position: absolute;
+    width: calc(100% + 8px);
+    height: 100%;
+    border-left: 3px solid rgb(0, 89, 255) ;
+    right: -7;
+    animation: cursor 0.6s infinite, typing 20s steps(14) infinite;
+}
+@keyframes cursor {
+    to{
+        border-left: 3px solid rgb(255, 255, 255) ;
+    }
+    
+}
+@keyframes words{
+    0%,25% {
+        content: 'Java Full Stack Developer';
+    }
+    26%,50% {
+        content: 'App Developer';
+    }
+    51%,75% {
+        content: 'UI & UX Designer';
+    }
+     76%,100% {
+        content: 'Student';
+    }
+
+}
+h3{
+    margin-top: 10px;
+}
+#cv{
+    font-size: 15px;
+    height: 65px;
+    margin-top: 15px;
+}
+.heading{
+    font-size: 25px;
+    color: white;
+    margin-top: 20px;
+    font-weight: bold;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.heading:hover{
+    color: aqua;
+}
+.heading:active{
+    color: rgb(85, 85, 162)
+    
+}
+.edu ul li{
+    list-style: none;
+    padding-top: 15px;
+   
+}
+.edulist{
+    color: aqua;
+    font-weight: bold;
+    font-size: 18px;
+}
+.po{
+    color: rgb(139, 160, 160);
+    font-weight: lighter;
+}
+.btn-container{
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-top: 20px;
+}
+.btn #cv {
+    height: 65px;
+    
+}
+#cv{
+    margin-top: -0.5px;
+}
+#hire{
+    height: 65px;
+    width: 210px;
+}
+#cv{
+    font-size: 15px;
+    width: 210px;
+}
+.skillcont{
+    overflow-x: scroll;
+    width: 1150px;
+    height: 160px;
+    
+}
+
+.skillcont::-webkit-scrollbar{
+  width: 15px;
+  
+  }
+  .skillcont::-webkit-scrollbar-track{
+  background: transparent;
+  
+  }
+  .skillcont::-webkit-scrollbar-thumb{
+    background: rgb(97,252,255);
+    background: linear-gradient(61deg, rgba(97,252,255,1) 0%, rgba(2,215,255,1) 53%, rgb(50, 72, 235) 100%);
+    border-radius: 5px;
+    
+  }
+.skillcont {
+    display: grid;
+    grid-template-columns: repeat(9, 100px);
+    grid-template-rows: repeat(1, 100px);
+    gap: 70px;
+    margin-top: 30px;
+    margin-left: 200px;
+}
+
+.boximg {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.9s ease;
+    background-color: white;
+    font-size: 24px;
+    height: 135px;
+    width: 150px;
+    padding: 30px;
+    border-radius: 10px;
+    position: relative;
+   }
+   .boximg img{
+    height: 70px;
+    width: 70px;
+    cursor: pointer;
+   }
+   .boximg:hover{
+    box-shadow: 0 0 20px rgb(0, 123, 255);
+    transition: scake(1.0);
+    background-color:  white;
+    color: rgb(1, 136, 255);
+    box-shadow: 0 0 25px aqua;
+    transition: transform 0.9s ease;
+    transform: scale(0.95);
+    
+   }
+   .boximg .text {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    font-weight: bolder;
+    color: rgb(255, 0, 0);
+    font-size: 18px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 10px;
+    
+   }
+   .boximg:hover .text {
+    display: block;
+    margin-top:100px;
+   
+   }
+
+h4{
+    font-size: 40px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: normal;
+    margin-left: 200px;
+    margin-top: 35px;
+}
+.boximg #we{
+    width: 120px;
+}
+.exper{
+    margin-top: 55px;
+}
+.epx{
+    width: 1150px;
+    margin-left: 200px;
+    text-align: justify;
+    margin-top: 25px;
+    line-height: 1.5;
+    font-size: 18px;
+}
+.subt{
+    display: flex;
+    margin-top: 30px;
+    margin-left: 180px;
+}
+.subt-link{
+padding-left: 20px;
+font-size: 30px;
+font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+font-weight: normal;
+cursor: pointer;
+}
+.subt-link:hover{
+    color: aqua;
+}
+.subt-link:active{
+    color: rgb(85, 85, 162);
+}
+.cont::-webkit-scrollbar{
+  width: 15px;
+  
+  }
+  .cont::-webkit-scrollbar-track{
+  background: transparent;
+  }
+  .cont::-webkit-scrollbar-thumb{
+    background: rgb(97,252,255);
+    background: linear-gradient(61deg, rgba(97,252,255,1) 0%, rgba(2,215,255,1) 53%, rgb(50, 72, 235) 100%);
+    border-radius: 5px;
+  }
+.cont{
+    overflow-x: scroll;
+    width: 1150px;
+    height: 350px;
+}
+.cont{
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    grid-template-rows: repeat(1, 100px);
+    gap: 100px;
+    margin-left: 200px;
+    margin-top: 35px;
+    
+}
+
+.cont{
+    display: none;
+}
+
+.epxbox{
+    height: 300px;
+    width: 350px;
+    background-color: white;
+    border-radius: 10px;
+    transition: transform 0.9s ease;
+    cursor: pointer;
+    }
+    .projectimg{
+        height: 250px;
+        width: 350px;
+        border-radius: 10px 10px 0px 0px;
+
+    }
+.cont.active{
+    display: grid;
+}
+.cont {
+    transition: opacity 0.5s ease;
+    opacity: 0;
+}
+
+.cont.active {
+    opacity: 1;
+}
+.epximg1{
+    height: 220px;
+        width: 350px;
+        border-radius: 10px 10px 0px 0px;
+}
+.epximg2{
+    height: 220px;
+        width: 350px;
+        border-radius: 10px 10px 0px 0px;
+}
+.epximg3{
+    
+    height: 220px;
+        width: 350px;
+        border-radius: 10px 10px 0px 0px;
+}
+
+.epxbox:hover{
+    box-shadow: 0 0 20px rgb(0, 123, 255);
+    transition: scake(1.0); 
+    transition: transform 0.9s ease;
+    transform: scale(0.95);
+}
+.epxtext{
+    color: rgb(20, 14, 103);
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    font-family:'Times New Roman', Times, serif;
+    line-height: 1.5;
+}
+
+.epxa{
+    text-decoration: none;
+}
+
+
+.proactive{
+    text-decoration: none;
+}
+
+.proactive p{
+    font-size: 25px;
+    font-weight: bold;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: rgb(20, 14, 103);
+    position: relative;
+    margin-top: 5px;
+    text-align: center;
+    }
+
+    .serr{
+    margin-top: 50px;
+}
+.serbox{
+    height: 300px;
+    width: 350px;
+    background-color: white;
+    border-radius: 10px;
+    cursor: pointer; 
+    transition: background 0.5s,transform 0.5s,color 0.5s;
+     }
+    
+    .cont1{
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    grid-template-rows: repeat(1, 100px);
+    gap: 300px;
+    margin-top: 30px;
+    margin-left: 200px;
+    }
+    .btn a{
+        text-decoration: none;
+        color: white;
+    }
+    .btna:hover{
+        color: rgb(1, 136, 255);
+    }
+    .serimg{
+        height: 100px;
+        width: 100px;
+        margin-left: 120px;
+        margin-top: 50px;
+    }
+    .serbox p{
+        color: rgb(20, 14, 103);
+        font-size: 25px;
+        font-weight: bold;
+        font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        text-align: center;
+    }
+    .serbox .serp{
+        font-weight: normal;
+        text-align:justify;
+        font-size: 15px;
+        padding-left: 25px;
+        padding-right: 25px;
+        margin-top: 10px;
+    }
+    .serbox:hover{
+        background-color:cornflowerblue;
+        transform: translateY(-10px);
+        
+        }
+   
+    .serbox:hover p {
+    color: white;
+    }
+  
+    .contflex{
+display: flex;
+margin-left: 185px;
+margin-top: 20px;
+
+}
+
+.contimg{
+    height: 30px;
+    width: 30px;
+    margin-left: 20px;
+    
+}
+.contect{
+    margin-top: 250px;
+}   
+form{
+    margin-left: 550px;
+    display: block;
+    top:-85px;
+    position: relative;
+    }
+.yourname{
+    width:500px;
+    
+    height: 40px;
+    border-radius: 3px;
+    background-color: rgb(10, 16, 78);
+    color: white;
+    font-size: 20px;
+    font-family:'Times New Roman', Times, serif;
+    font-weight: normal;
+}
+.yourmail{
+    width: 500px;
+    border: 0;
+    height: 40px;
+    border-radius: 3px;
+    background-color: rgb(10, 16, 78);
+    margin-top: 15px;
+    color: white;
+    font-size: 20px;
+    font-family: 'Times New Roman', Times, serif;
+}
+.textarea{
+    width: 500px;
+    border: 2px solid white;
+    border-radius: 3px;
+    background-color: rgb(10, 16, 78);
+    margin-top: 14px;
+    color: white;
+    font-size: 15px;
+    font-family: 'Times New Roman', Times, serif;
+}
+.contsub{
+    display: inline-block;
+    padding: 1rem 2.8rem;
+    background: rgb(1, 136, 255);
+    border-radius: 5px;
+    font-size: 15px;
+    color: white;
+    transition: transform 0.9s ease;
+    letter-spacing: 0.1rem;
+    transition: 0.9s ease;
+    cursor: pointer;
+    font-weight: bold;
+}
+.contsub:hover{
+    transition: scake(1.0);
+    background-color:  white;
+    color: rgb(1, 136, 255);
+    
+    transition: transform 0.9s ease;
+    transform: scale(0.95);
+}
+.contsub{
+    margin-left: 350px;
+    margin-top: 10px;
+}
+  .contimg{
+    transition: background 0.5s,transform 0.5s,color 0.5s;
+    
+  }
+
+  .contimg:hover{
+    transform: translateY(-3px);
+ }
+ #git{
+    background-color: white;
+    border-radius: 30px;
+ }
+.copyrights{
+    text-align: center;
+    width: 100%;
+    background: rgb(42, 42, 51);
+    margin-top: 20px;
+    padding: 20px 0;
+    font-weight: 300;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+@media screen and (max-width: 600px) {
+    .nav {
+        margin-left: 0;
+        text-align: center;
+    }
+    .nav li {
+        display: block;
+        padding-left: 0;
+        margin-bottom: 10px;
+    }
+    .proimg img {
+        height: 300px;
+        width: 300px;
+        margin-left: 0;
+        margin-top: 100px;
+    }
+    .about {
+        flex-direction: column;
+        gap: 2rem;
+        margin-top: 20px;
+    }
+    .detail h1 {
+        text-align: center;
+        transform: scale(0.9);
+    }
+    #detail {
+        width: 90%;
+        margin-top: 20px;
+        font-size: 15px;
+        text-align: justify;
+        padding-left: 50px;
+        margin-left: 5px;
+        padding-right: 15px;
+    }
+    .heading {
+        text-align: center;
+    }
+    .edu {
+        text-align: center;
+        font-size: 14px;
+    }
+    .edulist {
+        font-size: 14px;
+    }
+    .btn-container {
+        display: flex;
+        gap: 1rem;
+        margin-top: 20px;
+        margin-right: 10px;
+        transform: scale(0.68);
+    }
+    .btn {
+        padding: 0.5rem 1.5rem;
+        font-size: 14px;
+    }
+    .change {
+        font-size: 20px;
+        margin-bottom: 0.5rem;
+        text-align: center;
+    }
+    .skillcont {
+        grid-template-columns: repeat(2, 100px);
+        grid-template-rows: repeat(6, 100px);
+        gap: 60px;
+        margin-left: 33px;
+        transform: scale(0.85);
+        margin-top: 0px;
+    }
+    .skillcont{
+    overflow-y: scroll;
+    width: 350px;
+    height: 300px;
+    
+}
+    h4 {
+        font-size: 30px;
+        margin-left: 20px;
+        margin-top: 20px;
+        text-align: center;
+    }
+    .epx {
+        width: 90%;
+        margin-top: 20px;
+        font-size: 15px;
+        text-align: justify;
+        padding-left: 30px;
+        margin-left: 5px;
+    }
+    .subt {
+        justify-content: center;
+        margin-left: 0;
+    }
+    .subt-link {
+        padding-left: 10px;
+        font-size: 30px;
+        text-align: center;
+    }
+    .cont{
+        overflow-y:scroll;
+    width: 390px;
+    height: 350px;
+    }
+    .cont {
+        grid-template-columns: repeat(1, 100px);
+        grid-template-rows: repeat(6, 100px);
+        gap: 220px;
+        margin-left: 10px;
+        transform: scale(0.85);
+        margin-top: 50px;
+    }
+    .serr {
+        margin-top: 23px;
+    }
+    .cont1 {
+        grid-template-columns: repeat(1, 100px);
+        grid-template-rows: repeat(3, 100px);
+        gap: 220px;
+        margin-left: 30px;
+        transform: scale(0.85);
+    }
+    .contflex {
+        margin-left: 0;
+        margin-top: 10px;
+    }
+    form {
+        margin-left: 15px;
+        margin-top: 100px;
+        width: 90%;
+    }
+    .yourname, .yourmail, .textarea {
+        width: 100%;
+    }
+    .contsub {
+        margin-left: 0;
+        width: 100%;
+        text-align: center;
+    }
+    .contect {
+        transform: scale(0.88);
+        margin-left: 20px;
+        margin-top: 150px;
+    }
+    .nav img {
+        display: flex;
+    }
+    .nav ul {
+        background: black;
+        position: fixed;
+        top: 0;
+        right: 0;
+        height: 100vh;
+        width: 300px;
+        padding-top: 50px;
+        right: -300px;
+        z-index: 5;
+        transition: right 0.5s;
+    }
+    .nav ul li {
+        display: block;
+        text-align: left;
+        margin-left: 30px;
+        line-height: 1.4;
+        padding-top: 10px;
+    }
+    .nav #closebar {
+        position: absolute;
+        top: 15px;
+        margin-left: 30px;
+    }
+    .nav #menubar {
+        position: fixed;
+        top: 15px;
+        margin-left: 330px;
+        z-index: 2;
+    }
+    #menubar {
+        height: 30px;
+        width: 30px;
+        background-color: aliceblue;
+    }
+    .home img {
+        height: 300px;
+        width: 100%;
+    }
+    .home .hop {
+        font-size: 17px;
+        margin-left: -460px;
+        padding-right: 170px;
+        text-align: justify;
+    }
+    .home button {
+        margin-left: -400px;
+        transform: scale(0.7);
+    }
+    .home button:hover {
+        transform: scale(0.68);
+    }
+    .home .hop1 {
+        font-size: 20px;
+        margin-left: -460px;
+        margin-top: -230px;
+    }
+}
+
+
+.navimg{
+    height: 25px;
+    width: 25px;
+    display: none;
+    margin: 10px;
+}
+
+.hand{
+    position: absolute;
+    margin-top: 320px;
+    margin-left: 500px;
+    
+}
+.hop1{
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 35px;
+    font-weight: bold;
+}
+.hop{
+    font-size: 25px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    padding-right: 25%;
+    margin-top: 10px;
+    line-height: 1.6;
+}
+.home{
+    margin-top: 30px;
+}
+.hombt{
+    display: inline-block;
+    padding: 1rem 2.8rem;
+    background: rgb(1, 136, 255);
+    border-radius: 40px;
+    font-size: 15px;
+    color: white;
+    transition: transform 0.9s ease;
+    letter-spacing: 0.1rem;
+    transition: 0.9s ease;
+    cursor: pointer;
+    font-weight: bold;
+}
+.hombt:hover{
+    box-shadow: 0 0 20px rgb(0, 123, 255);
+    transition: scake(1.0);
+    background-color:  white;
+    color: rgb(1, 136, 255);
+    box-shadow: 0 0 25px aqua;
+    transition: transform 0.9s ease;
+    transform: scale(0.95);
+}
+.home a{
+    text-decoration: none;
+}
+.hombt{
+    margin-top: 10px;
+    margin-left: 200px;
+} 
+.nav{
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+    width: 100%;
+    background-color: black;
+    padding: 25px 0;
+}
+.label{
+    position: absolute;
+    left: 15px;
+    color: rgb(122, 115, 115);
+    pointer-events: none;
+    transform: translateY(15px);
+    font-size: 18px;
+    transition: 150ms cubic-bezier(0.04,0,0.2,1);
+    margin-top: -5px;
+
+}
+.yourname:focus,.yourname:valid{
+    outline: none;
+    border: 1px soild red;
+}
+.yourname:focus ~ label,.yourname:valid ~ label{
+    transform: translateX(-10%) translateY(-30%) scale(0.9);
+    background: rgb(10,16,78);
+    background: linear-gradient(0deg, rgba(10,16,78,1) 0%, rgba(0,0,0,1) 100%);
+    padding: 0 .2rem;
+    color: white;
+}
+.yourname{
+    border: solid 2px white;
+}
+.yourmail:focus,.yourmail:valid{
+    outline: none;
+    border: 1px soild red;
+}
+.yourmail:focus ~ label,.yourmail:valid ~ label{
+    transform: translateX(-10%) translateY(-30%) scale(0.9);
+    background: rgb(10,16,78);
+    background: linear-gradient(0deg, rgba(10,16,78,1) 0%, rgba(0,0,0,1) 100%);
+    padding: 0 .2rem;
+    color: white;
+}
+.yourmail{
+    border: solid 2px white;
+}
+#email{
+    margin-top: 10px;
+}
+textarea{
+    text-align: left;
+    padding-left: 20px;
+    padding-right: 20px;
+    border: 2px soild white;
+}
+  </style>
+    <title>About Myself</title>
+</head>
+<body>
+    <div class="nav">
+        <ul id="sidemenu">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#contact">Contact</a></li>
+           <img src="myimage.jpg" class="navimg" id="closebar" onclick="closemenu()">
+        </ul>
+          <img src="myimage.jpg" class="navimg" id="menubar" onclick="openmenu()">
+    </div>
+    <div class="about">
+    <div class="proimg">
+            <img src="myimage.jpg">
+        </div>
+        <div class="detail" id="about">
+            <h1>Hi,It's<span> Tushar Prajapati</span></h1>
+            <h3 class="change">I'm a Frontend Developer</h3>
+            <p id="detail">Highly motivated recent graduate with a Bachelor in Computer Application, passionate about full stack development and proficient in MySQL,Java. During my internship, I gained hands-on experience in real-world projects, showcasing my ability to achieve and excel. With a strong foundation in both front-end and back-end technologies, I am eager to bring my enthusiasm and fresh perspective to a dynamic team.Seeking an opportunity to kickstart my career in a challenging and rewarding environment, I am dedicated to continuous learning and adapting to new challenges. My problem-solving skills, teamwork, and effective communication abilities make me a valuable addition to any team. I am ready to tackle complex problems and grow alongside a forward-thinking company committed to innovation and excellence.</p>
+            <div class="heading">
+                <p>Education</p>
+            </div>
+            <div class="edu">
+                <ul>
+                    <li><span class="edulist">MCA (2024-Present)</span>
+                        <p class="po">Kiet Group Of Institution,Muradnagar</p>
+                    </li>
+                    <li><span class="edulist">BCA (2021-2024)</span>
+                        <p class="po">Institue Of Applied Medicines And Reserach Duhai Ghaziabad</p>
+                    </li>
+                    <li><span class="edulist">Higher Secondary (2020)</span>
+                        <p class="po">T.R.M Public School Modinagar</p>
+                    </li>
+                    <li><span class="edulist">SSLC (2018)</span>
+                        <p class="po">T.R.M Public School Modinagar</p>
+                    </li>
+                </ul>
+            </div>
+            <div class="btn-container">
+                <a href="#" class="btna"><button class="btn" id="cv">Download CV</button></a>
+            </div>
+</div>
+    </div>
+    <div class="Skills" id="skills">
+      <h4>Skills</h4>
+      <div class="skillcont">
+        <div class="boximg"><img src="pngwing.com.png"><div class="text">Advanced</div></div>
+        <div class="boximg"><img src="pngwing.com (1).png"><div class="text">Intermediate</div></div>
+        <div class="boximg"><img src="pngwing.com (2).png"><div class="text">Intermediate</div></div>
+        <div class="boximg"><img src="pngwing.com (3).png"><div class="text">Intermediate</div></div>
+        <div class="boximg"><img src="pngwing.com (4).png"><div class="text">Intermediate</div></div>
+        <div class="boximg"><img src="pngwing.com (5).png"><div class="text">Intermediate</div></div>
+        <div class="boximg"><img src="pngwing.com (9).png"><div class="text">Advanced</div></div>
+        <div class="boximg"><img src="pngwing.com (10).png"><div class="text">Advanced</div></div>
+        <div class="boximg"><img src="pngwing.com (11).png"><div class="text">Advanced</div></div>
+      </div>
+    </div>
+<div class="exper" id="experience">
+    <h4>Experience</h4>
+    <div><p class="epx">During my internship and project experiences in web development, I gained invaluable skills and insights. I actively contributed to building responsive and dynamic web applications, mastering technologies like HTML, CSS, JavaScript, and frameworks such as React. I developed a keen eye for user-centric design principles, crafting intuitive interfaces and conducting usability tests to enhance user experience. In app development, I applied my knowledge in mobile platforms like Android, leveraging languages such as Java, to create functional and efficient mobile applications. These experiences honed my problem-solving abilities and collaborative skills in diverse tech environments.</p></div>
+    <div class="subt">
+      <p class="subt-link active-link" onclick="opentab('internship')">Internships</p>
+      <p class="subt-link" onclick="opentab('project')">Projects</p>
+      </div>
+      <div class="cont active" id="internship">
+        <div class="epxbox"><a href="#" class="epxa"><img src="octanetsolutions_logo.jpeg" class="epximg3">
+            <p class="epxtext">Web Development Intern</p>
+        </div>   
+        <div class="epxbox"><a href="#" class="epxa"><img src="main_flow_services_and_technologies_logo.jpeg" class="epximg3">
+            <p class="epxtext">Web Development Intern</p>
+        </div>  
+     <div class="cont" id="project">
+        <div class="epxbox"><a href="#" class="proactive"><img src="earth.jpg" class="projectimg">
+            <p>Weather Website</p>
+            </a></div>
+            <div class="epxbox"><a href="#" class="proactive"><img src="ro.jpg" class="projectimg">
+                <p>Tribute Page</p>
+                </a>
+            </div>
+            <div class="epxbox"><a href="#" class="proactive"><img src="call.png" class="projectimg">
+                <p>Basic Calculator</p>
+                </a>
+            </div>
+            <div class="epxbox"><a href="#" class="proactive"><img src="Tempp.png" class="projectimg">
+                <p>Temperature</p>
+                </a>
+            </div>
+            <div class="epxbox"><a href="#" class="proactive"><img src="email.png" class="projectimg">
+                <p>E-Mail Template</p>
+                </a>
+            </div>
+            </div> 
+</div>
+<div class="contect" id="contact">
+    <div class="contect-me"><h4>Contect Me</h4>
+    <div class="contflex">
+    <div><a href="#"><img src="logo_15465653.png" class="contimg"></a></div>
+    <div><a href="#"><img src="linkedin_3536505.png" class="contimg"></a></div>
+    <div><a href="#"><img src="github.png" class="contimg" id="git"></a></div>
+    </div>
+    <div class="info">
+    <form>
+    <input type="text" name="Name" class="yourname" required><label class="label">YOUR NAME</label><br>
+    <input type="email" name="email"  class="yourmail" required><label class="label" id="email">YOUR EMAIL</label><br>
+    <textarea name="message" rows="8" placeholder="Message" class="textarea"></textarea>
+    <div class="bitf">
+    <button type="submit" class="contsub">Submit</button>
+    </div>
+   </form>
+    </div>
+    </div>
+</div>
+    
+<div class="copyrights">
+    <p>© Tushar 2024. All rights reserved.</p>
+</div>
+<script>
+     var subtlinks = document.getElementsByClassName("subt-link");
+    var conts = document.getElementsByClassName("cont");
+
+    function opentab(tabname) {
+        for (var subtlink of subtlinks) {
+            subtlink.classList.remove("active-link");
+        }
+        for (var cont of conts) {
+            cont.classList.remove("active");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active");
+    }
+
+    var sidemenu = document.getElementById("sidemenu");
+    function openmenu(){
+        sidemenu.style.right = "0";
+    }
+    function closemenu(){
+        sidemenu.style.right = "-300px";
+    }
+
+</script>
+</body>
+</html>
